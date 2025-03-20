@@ -5,7 +5,7 @@ namespace NotesAPP
 {
     public class JsonBase64FileData
     {
-        // Serialize and decode the object to JSON
+        // Serialize
         public void SaveToFile<T>(T data, string path)
         {
             string json = JsonSerializer.Serialize(data);
@@ -15,7 +15,7 @@ namespace NotesAPP
             File.WriteAllText(path, base64);
         }
 
-        // Deserialize and decode JSON to an object
+        // Deserialize 
         public T LoadFromFile<T>(string path)
         {
             string base64 = File.ReadAllText(path);
